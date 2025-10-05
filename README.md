@@ -119,10 +119,10 @@ python -m venv .venv && source .venv/bin/activate  # (Linux/macOS)
 pip install -r requirements.txt
 
 # Fast demo (reduced search; ~2–3 mins)
-python -m titanic_automl.cli --mode demo --data-dir . --output-dir artifacts
+python -m titanic_automl.cli --mode demo --data-dir data/data_raw --output-dir artifacts
 
 # Full adaptive search (longer)
-python -m titanic_automl.cli --mode full --data-dir . --output-dir artifacts
+python -m titanic_automl.cli --mode full --data-dir data/data_raw --output-dir artifacts
 ```
 
 Output sample (demo mode):
