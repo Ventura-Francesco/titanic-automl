@@ -100,6 +100,7 @@ titanic-automl/
   artifacts/          # (gitignored) model bundles / logs
   .github/workflows/ci.yml
   requirements.txt
+  pyproject.toml
   README.md
   LICENSE (MIT)
   .gitignore
