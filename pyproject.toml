@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "titanic-automl"
+version = "0.1.0"
+description = "Adaptive AutoML for Titanic (demo + full modes)"
+dependencies = [
+  "pandas",
+  "numpy",
+  "scikit-learn",
+  "xgboost",
+  "joblib",
+  "tqdm",
+  "matplotlib"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
