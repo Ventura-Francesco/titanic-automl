@@ -132,16 +132,34 @@ python -m titanic_automl.cli --mode full
 
 Output sample (demo mode):
 ```
-===== MODEL: RandomForest =====
-[ITER 1] RandomForest: Evaluating 12 combos ...
-[BEST] Iter 1 RandomForest: median=0.8520 mean=0.8462 std=0.0181
-[STOP] No expansions triggered (iteration 1) ...
-[THRESHOLD][RandomForest] Default@0.5=0.8429 | BestThr=0.520 Acc=0.8462 Gain=0.0033
-...
-Model: RandomForest
-Median CV Accuracy: 0.8539
-Selected Threshold: 0.520
-Avg Inference Latency (sec/pred): 0.00078
+============================================================
+Titanic AutoML Pipeline (DEMO mode)
+============================================================
+
+Loading data...
+Preprocessing data...
+Data shape: (891, 7)
+Positive class ratio: 0.384
+
+Searching for best model...
+Searching LogisticRegression...
+^[[D  Best score: 0.7296
+Searching RandomForest...
+  Best score: 0.7655
+
+Best model: RandomForest
+CV F1 Score: 0.7655
+
+Training final model...
+Optimizing classification threshold...
+Optimal threshold: 0.480
+
+Final Evaluation Metrics:
+  accuracy: 0.9450
+  f1: 0.9250
+  precision: 0.9711
+  recall: 0.8830
+  roc_auc: 0.9817
 ```
 
 ---
@@ -164,7 +182,6 @@ Avg Inference Latency (sec/pred): 0.00078
 | Demo | XGBoost      | 0.860 – 0.865 | 0.845 – 0.850 | 0.50–0.52     | +0.0–0.01 | ~0.0005–0.0010   | ~2–3 m |
 | Full | XGBoost/RF   | 0.865 – 0.870 | 0.848 – 0.856 | 0.50–0.66     | +0.0–0.02 | ~0.0005–0.0012   | 15–30 m |
 
-> Replace with your actual recorded table after first full run.
 
 ---
 
