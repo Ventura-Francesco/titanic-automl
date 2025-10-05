@@ -77,6 +77,10 @@ Stores:
 
 ```
 titanic-automl/
+  data/
+    data_raw/
+      train.csv
+      test.csv
   src/titanic_automl/
     __init__.py
     cli.py               # Entry point (demo/full modes)
