@@ -122,12 +122,12 @@ pip install -r requirements.txt
 pip install -e .
 
 # Fast demo (reduced search; ~2–3 mins)
-python -m titanic_automl.cli
---mode demo --data-dir data/data_raw --output-dir artifacts
+python -m titanic_automl.cli --mode demo
+--data-dir data/data_raw --output-dir artifacts
 
 # Full adaptive search (longer)
-python -m titanic_automl.cli
---mode full --data-dir data/data_raw --output-dir artifacts
+python -m titanic_automl.cli --mode full
+--data-dir data/data_raw --output-dir artifacts
 ```
 
 Output sample (demo mode):
